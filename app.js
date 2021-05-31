@@ -16,6 +16,7 @@ var app = express();
 app.use(helmet());
 
 // Set up mongoose connection
+var mongoose = require('mongoose');
 var dev_db_url = 'mongodb+srv://YoungCasual76:Rockoman500@cluster0.tdrgt.mongodb.net/local_library?retryWrites=true&w=majority'
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
